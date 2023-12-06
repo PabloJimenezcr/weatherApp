@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  outline: none;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  overflow: hidden;
+  background-color: #0081c9;
+}
+
+.container {
+  position: relative;
+  width: 450px;
+  height: 105px;
+  background-color: #2d2727;
+  padding: 28px 32px;
+  border-radius: 10px;
+  transition: all 0.6s ease-in-out;
+}
+.container .searchBox {
+  width: 100%;
+  height: -moz-min-content;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .searchBox input {
+  width: 80%;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-left: 32px;
+  color: #fff;
+  background: transparent;
+}
+.container .searchBox input::-moz-placeholder {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(136, 119, 136, 0.4666666667);
+  text-transform: capitalize;
+}
+.container .searchBox input::placeholder {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(136, 119, 136, 0.4666666667);
+  text-transform: capitalize;
+}
+.container .searchBox button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 22px;
+  transition: 0.4s ease-in;
+}
+.container .searchBox button:hover {
+  color: #fff;
+  background-color: #0081c9;
+}
+.container .searchBox i {
+  position: absolute;
+  color: #fff;
+  font-size: 28px;
+}
+.container .weatherBox {
+  text-align: center;
+  color: #fff;
+}
+.container .weatherBox img {
+  width: 60%;
+  margin-top: 30px;
+}
+.container .weatherBox .temperature {
+  position: relative;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-top: 30px;
+  margin-left: -16px;
+}
+.container .weatherBox .temperature span {
+  position: absolute;
+  margin-left: 4px;
+  font-size: 1.5rem;
+}
+.container .weatherBox .description {
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.container .weatherDetails {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+}
+.container .weatherDetails.humidity, .container .weatherDetails.wind {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 50%;
+}
+.container .weatherDetails .humidity {
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .weatherDetails .wind {
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .weatherDetails i {
+  font-size: 26px;
+  margin: 10px 0;
+  height: 50px;
+  width: 50px;
+  background-color: #0081c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+}
+.container .weatherDetails span {
+  font-size: 22px;
+  font-weight: 500;
+}
+.container .weatherDetails p {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.container .notFound {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  scale: 0;
+  opacity: 0;
+  display: none;
+}
+.container .notFound img {
+  width: 70%;
+}
+.container .notFound p {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 12px;
+}
+.container .weatherBox,
+.container .weatherDetails {
+  scale: 0;
+  opacity: 0;
+}
+
+.fadeIn {
+  animation: 0.5s fadeIn forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    width: 350px;
+    height: 590px !important;
+  }
+}/*# sourceMappingURL=index.css.map */
